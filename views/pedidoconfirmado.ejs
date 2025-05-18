@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Confirmado</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f8f7; /* Un fondo claro y suave */
+        }
+
+        .confirmation-container {
+            background-color: #e0f7fa; /* Un tono azul claro y suave */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2e7d32; /* Un verde agradable para la confirmación */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .confirmation-icon {
+            font-size: 4em;
+            color: #4caf50; /* Un verde más brillante para el icono */
+            margin-bottom: 20px;
+        }
+
+        .accept-button {
+            background-color: #007bff; /* Azul para el botón de aceptar */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .accept-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h2>PEDIDO CONFIRMADO</h2>
+        <div class="confirmation-icon">
+            ✔️
+        </div>
+        <button class="accept-button" onclick="window.location.href='/'">ACEPTAR</button>
+    </div>
+</body>
+</html>

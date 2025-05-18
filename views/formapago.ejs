@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de Pago</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .payment-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .payment-method a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .payment-method img {
+            max-height: 40px;
+            margin-left: 15px;
+        }
+
+        .next-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .next-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Seleccione su forma de pago:</h2>
+        <div class="payment-options">
+            <div class="payment-method">
+                <span>Pago por oxxo:</span>
+                <a href="#" id="oxxo-link">
+                    <img src="/images/oxxo_logo.png" alt="OXXO Logo">
+                </a>
+            </div>
+            <div class="payment-method">
+                <span>VISA/MasterCard:</span>
+                <a href="#" id="visa-mastercard-link">
+                    <img src="/images/visa_mastercard_logos.png" alt="VISA/MasterCard Logos">
+                </a>
+            </div>
+        </div>
+        <button class="next-button">SIGUIENTE</button>
+    </div>
+
+    <script>
+        // Aquí pondrás las URLs de redirección después
+        const oxxoLink = document.getElementById('oxxo-link');
+        const visaMastercardLink = document.getElementById('visa-mastercard-link');
+
+        oxxoLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el enlace navegue inmediatamente
+            const oxxoPagoURL = 'AQUI_IRA_LA_URL_DE_PAGO_OXXO'; // Reemplaza con la URL real
+            window.location.href = oxxoPagoURL; // Redirige a la URL de OXXO
+        });
+
+        visaMastercardLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el enlace navegue inmediatamente
+            const visaMastercardPagoURL = 'AQUI_IRA_LA_URL_DE_PAGO_VISA_MASTERCARD'; // Reemplaza con la URL real
+            window.location.href = visaMastercardPagoURL; // Redirige a la URL de VISA/MasterCard
+        });
+
+        const nextButton = document.querySelector('.next-button');
+        nextButton.addEventListener('click', function() {
+            alert('Procesando al siguiente paso...');
+            // Aquí irá la lógica para el botón "SIGUIENTE"
+        });
+    </script>
+</body>
+</html>

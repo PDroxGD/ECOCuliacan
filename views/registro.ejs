@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa; /* Un fondo claro */
+        }
+
+        .register-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px; /* Ancho moderado del formulario */
+        }
+
+        h2 {
+            color: #343a40; /* Texto oscuro */
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057; /* Texto secundario oscuro */
+            font-size: 0.9em;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da; /* Borde gris claro */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        .register-button {
+            background-color: #28a745; /* Verde para registrarse */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-button:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>REGISTRARSE</h2>
+        <form action="/registro" method="POST"> <div class="form-group">
+                <label for="nombre_completo">Nombre completo:</label>
+                <input type="text" id="nombre_completo" name="nombre_completo" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div class="form-group">
+                <label for="numero_telefonico">Número telefónico:</label>
+                <input type="tel" id="numero_telefonico" name="numero_telefonico" required>
+            </div>
+            <button type="submit" class="register-button">REGISTRARSE</button>
+        </form>
+    </div>
+</body>
+</html>
