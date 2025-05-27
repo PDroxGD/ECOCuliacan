@@ -5,8 +5,6 @@
 
 
 
-**Producto 2: Código y Documentación**
-
 ##  Integrantes del Equipo
 
 * Chávez Armenta Tania Elena.
