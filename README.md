@@ -1,5 +1,6 @@
 
 <img src="/public/images/ECO.png" alt="Logo de ECO Culiacán" width="200"/>
+
 # ECO Culiacán: Sistema Inteligente de Gestión de Residuos
 
 
