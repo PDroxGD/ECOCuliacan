@@ -6,11 +6,12 @@
 
 
 ##  Integrantes del Equipo
-
+* Barraza Gonzalez Victor Hugo.
 * Chávez Armenta Tania Elena.
 * Madero Meza Pedro Faustino.
+* Juarez Verdugo Michelle Alejandra.
 * Urías Jacobo Lesley Kirey.
-* Juarez Verdugo Michelle Alejandra..
+
 
 
 Culiacán, Sinaloa, México. Mayo de 2025.
