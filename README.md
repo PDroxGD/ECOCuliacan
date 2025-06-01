@@ -119,6 +119,7 @@ Esta arquitectura fue elegida por su **modularidad**, **facilidad de mantenimien
 * **`connect-flash`:** Middleware para mensajes flash (notificaciones temporales).
 * **`passport` & `passport-local`:** Módulos para autenticación de usuarios (estrategia local con usuario y contraseña).
 * **`bcryptjs`:** Librería para cifrado de contraseñas (hashing).
+* **`dotenv`**: Para cargar variables de entorno.
 * **Mongoose:** Librería para modelado de objetos MongoDB en Node.js, facilitando la interacción con la base de datos.
 
 ### Base de Datos
@@ -131,29 +132,45 @@ Esta arquitectura fue elegida por su **modularidad**, **facilidad de mantenimien
     │   ├── css/
     │   │   └── style.css      # Estilos globales
     │   ├── images/
+    │   │   ├── aprobado.gif
+    │   │   ├── camion.gif
     │   │   ├── ECO.png
     │   │   ├── facebook.png
-    │   │   ├── twitter.png
-    │   │   ├── ig.png
-    │   │   ├── usuario.png
+    │   │   ├── feliz.gif
+    │   │   ├── iconocandado.png
+    │   │   ├── iconofecha.png
+    │   │   ├── iconotarjeta.png
     │   │   ├── iconousuario.png
+    │   │   ├── ig.png
+    │   │   ├── mapa.png
     │   │   ├── ojo.png
-    │   │   └── ojoff.png
-    ├── views/                 # Archivos de plantillas EJS
-    │   ├── login.ejs          # Página de inicio de sesión
-    │   ├── registro.ejs       # Página de registro
-    │   ├── lBienvenida.ejs    # Página de bienvenida
-    │   └── index.ejs          # Página de inicio
-    ├── config/                # Configuraciones (ej. base de datos, Passport)
-    │   ├── passport.js        # Configuración de Passport
-    │   └── db.js              # Configuración de conexión a la base de datos (MongoDB)
-    ├── models/                # Definición de esquemas y modelos de Mongoose
-    │   ├── User.js            # Esquema y modelo para usuarios
-    │   └── Report.js          # Esquema y modelo para reportes
-    ├── server.js              # Archivo principal de la aplicación Node.js
-    ├── package.json           # Metadatos del proyecto y dependencias
-    ├── package-lock.json      # Bloqueo de versiones de dependencias
-    └── README.md              # Este archivo
+    │   │   ├── ojoff.png
+    │   │   ├── paypal.png
+    │   │   ├── redes.png
+    │   │   ├── tarjeta.png
+    │   │   ├── twitter.png
+    │   │   └── usuario.png
+    │   ├── address.js # Archivos JS para el autoconpletado de direcciones
+    │   └── events.js # Archivos JS para eventos del cliente
+    ├── views/                      # Archivos de plantillas EJS
+    │   ├── Bienvenida.ejs          # Página de bienvenida
+    │   ├── crear_reporte.ejs       # Página de crear reporte
+    │   ├── donacion_exitosa.ejs    # Página de agradecimiento por donación
+    │   ├── donacion.ejs            # Página de donación
+    │   ├── index.ejs               # Página de inicio
+    │   ├── login.ejs               # Página de inicio de sesión
+    │   ├── registro.ejs            # Página de registro
+    │   ├── reporte_creado.ejs      # Página de reporte creado
+    │   └── seleccion_zona.ejs      # Página de selección de zona
+    ├── models/                     # Definición de esquemas y modelos de Mongoose
+    │   ├── Donation.js             # Esquema y modelo para donaciones
+    │   ├── Report.js               # Esquema y modelo para reportes
+    │   └── User.js                 # Esquema y modelo para usuarios
+    ├── .env                        # Archivo para variables de entorno (conexión a MongoDB, secreto de sesión, puerto).
+    ├── package.json                # Metadatos del proyecto y dependencias
+    ├── package-lock.json           # Bloqueo de versiones de dependencias
+    ├── README.md                   # Este archivo
+    └── server.js                   # Archivo principal de la aplicación Node.js
 ## Instalación y Uso 
 
 Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local.
@@ -170,7 +187,7 @@ Asegúrate de tener instalado lo siguiente:
 
 1.  **Clona este repositorio:**
     ```bash
-    git clone https://github.com/TaniaElenaa/ECOCuliacan
+    git clone https://github.com/PDroxGD/ECOCuliacan.git
     cd ECOCuliacan
     ```
 
@@ -179,10 +196,13 @@ Asegúrate de tener instalado lo siguiente:
     npm install
     ```
 
-3.  **Configura tu base de datos MongoDB:**
-    * Asegúrate de que tu servidor MongoDB esté corriendo.
-    * En tu archivo de configuración de la base de datos (por ejemplo, `config/db.js`), especifica la URL de conexión a tu instancia de MongoDB. Por ejemplo: `mongodb://localhost:27017/eco_culiacan_db`.
-    * **Importante:** Deberás definir un modelo de usuario (por ejemplo, en `models/User.js`) usando Mongoose, con campos para `username` y `password` que Passport.js usará para la autenticación.
+3.  **Configurar las variables de entorno:**
+    * Crear un archivo `.env` en la raíz del proyecto con las siguientes variables.
+    ```bash
+    PORT=3000
+    MONGODB_URI=<tu_uri_de_mongodb>
+    SESSION_SECRET=<tu_secreto_de_sesion>
+    ```
 
 ### Ejecución del Proyecto
 
