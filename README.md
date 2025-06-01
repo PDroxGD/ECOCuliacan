@@ -47,8 +47,6 @@ Culiacán, Sinaloa, México. Mayo de 2025.
 
 La gestión tradicional de residuos en Culiacán a menudo presenta desafíos en cuanto a eficiencia, planificación y comodidad para la ciudadanía, generando inconvenientes y afectando el entorno urbano. Ante esta necesidad de optimización y con la visión de construir una ciudad más limpia y sostenible, presentamos ECO Culiacán, un sistema innovador diseñado para revolucionar la forma en que los usuarios solicitan y programan la recolección de su basura, ofreciendo un servicio más eficiente a las necesidades de la población.
 
-Este documento y el código adjunto corresponden al **Producto 2** del curso, centrándonos en el desarrollo del portal web, la autenticación de usuarios y la implementación de una funcionalidad CRUD esencial.
-
 ## Resumen del Sistema
 
 ECO Culiacán es un sistema inteligente de gestión de residuos cuyo objetivo es optimizar la recolección de basura, facilitar la interacción entre ciudadanos y personal de recolección, y promover una ciudad más limpia y sostenible en Culiacán, Sinaloa. A través de un portal web intuitivo, los usuarios pueden registrarse, iniciar sesión y gestionar sus interacciones con el sistema de recolección.
