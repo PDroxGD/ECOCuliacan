@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Reporte - ECO Culiacán</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/ECO.png">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <a href="/"><img src="/images/ECO.png" alt="Logo ECO Culiacán"/><span></span></a>
+        </div>
+        <div>
+            <% if (user) { %>
+                <span style="margin-right: 15px;">¡Hola, <%= user.username %>!</span>
+                <a href="/logout"><button class="secondary-btn">Cerrar Sesión</button></a>
+            <% } else { %>
+                <a href="/login"><button class="btn-iniciar-sesion">Iniciar Sesión</button></a>
+            <% } %>
+        </div>
+    </header>
+    <main class="main-content">
+        <% if (success_msg && success_msg.length > 0) { %>
+            <div class="flash-message success">
+                <%= success_msg %>
+            </div>
+        <% } %>
+        <% if (error_msg && error_msg.length > 0) { %>
+            <div class="flash-message error">
+                <%- error_msg %>
+            </div>
+        <% } %>
+        <% if (error && error.length > 0) { %>
+            <div class="flash-message error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <div class="report-form-container">
+            <img src="/images/feliz.gif" alt="Icono de Reporte" />
+
+            <h1>Reportar Problema de Recolección</h1>
+            <form action="/crear-reporte" method="POST">
+                <div class="form-group">
+                    <label for="fullName">Nombre Completo:</label>
+                    <input type="text" id="fullName" name="fullName" value="<%= formData.fullName || '' %>" oninput="inputName(this)" required>
+                </div>
+                <div class="form-group" style="position: relative;">
+                    <label for="address">Dirección de la Calle:</label>
+                    <input type="text" id="address" name="address" value="<%= formData.address || '' %>" required autocomplete="off">
+                    <ul id="autocomplete-results" class="autocomplete-list"></ul>
+                </div>
+                <div class="form-group">
+                    <label for="zipCode">Código Postal:</label>
+                    <input type="text" id="zipCode" name="zipCode" value="<%= formData.zipCode || '' %>" oninput="onlyNumber(this, 5)" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Número Celular:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" value="<%= formData.phoneNumber || '' %>" oninput="onlyNumber(this, 10)" required>
+                </div>
+                <div class="form-group">
+                    <label for="problemDescription">Descripción del Problema en la Calle:</label>
+                    <textarea id="problemDescription" name="problemDescription" rows="5" required><%= formData.problemDescription || '' %></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Reporte</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <p>Menos basura, más futuro</p>
+        <a href="https://ECOCuliacan.com.mx/" target="_blank">ECOCuliacán.com.mx</a>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/16Je91rWsc" target="_blank"><img src="/images/facebook.png" alt="Facebook" class="social-icon"></a>
+            <a href="https://x.com/ECOCuliacan" target="_blank"><img src="/images/twitter.png" alt="Twitter" class="social-icon"></a>
+            <a href="https://www.instagram.com/eco.culiacan/profilecard/" target="_blank"><img src="/images/ig.png" alt="Instagram" class="social-icon"></a>
+        </div>
+    </footer>
+
+    <script src="/events.js"></script>
+    <script src="/address.js"></script>
+
+</body>
+</html>
