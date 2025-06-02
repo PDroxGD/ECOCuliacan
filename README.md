@@ -10,7 +10,7 @@
 * Chávez Armenta Tania Elena.
 * Madero Meza Pedro Faustino.
 * Juarez Verdugo Michelle Alejandra.
-* Urías Jacobo Lesley Kirey.
+* Urias Jacobo Lesley Kirey.
 
 
 
