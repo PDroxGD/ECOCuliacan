@@ -52,12 +52,12 @@ function inputName(element) {
         case 'cardHolder':
             // Solo permite letras y espacios para nombres
             element.value = input.replace(/[^A-Za-z\s]/g, '');
-            // Limpia cualquier mensaje de validación personalizado establecido previamente
+            // Limpia cualquier mensaje de validación personalizado creado previamente
             element.setCustomValidity('');
             break;
 
         case 'expiryDate':
-            // Elimina cualquier carácter que no sea un dígito
+            // Elimina cualquier carácter que no sea un dígito/numero
             input = input.replace(/\D/g, '');
 
             // Agrega la barra después de los primeros 2 dígitos (el mes)
@@ -90,7 +90,7 @@ function inputName(element) {
 // Esto da feedback inmediato al usuario cuando sale del campo si el formato es incorrecto.
 document.addEventListener('DOMContentLoaded', function() {
     const expiryDateField = document.getElementById('expiryDate');
-    if (expiryDateField) { // Asegurarse de que el elemento existe
+    if (expiryDateField) { // Asegura de que el elemento existe
         expiryDateField.addEventListener('blur', function() {
             const input = this.value;
             const regex = /^(0[1-9]|1[0-2])\/?(\d{2})$/;
