@@ -9,7 +9,7 @@
 * Barraza Gonzalez Victor Hugo.
 * Chávez Armenta Tania Elena.
 * Madero Meza Pedro Faustino.
-* Juarez Verdugo Michelle Alejandra.
+* Juárez Verdugo Michelle Alejandra.
 * Urias Jacobo Lesley Kirey.
 
 
@@ -100,7 +100,7 @@ El sistema ECO Culiacán sigue una arquitectura **Cliente-Servidor en Capas**, d
 * **Base de Datos (MongoDB):** Almacena de forma persistente toda la información del sistema, como datos de usuarios, reportes de residuos, rutas, etc.
 * **API REST:** El canal de comunicación estandarizado que permite la interacción entre los clientes (móvil y web) y el servidor backend.
 
-Esta arquitectura fue elegida por su **modularidad**, **facilidad de mantenimiento** y **escalabilidad**, permitiendo que los componentes funcionen de forma independiente y facilitando futuras mejoras y adaptaciones.
+Esta arquitectura de eleccion por su **modularidad**, **facilidad de mantenimiento** y **escalabilidad**, permitiendo que los componentes funcionen de forma independiente y facilitando futuras mejoras y adaptaciones.
 
 ## Tecnologías Utilizadas
 
@@ -171,7 +171,7 @@ Esta arquitectura fue elegida por su **modularidad**, **facilidad de mantenimien
     └── server.js                   # Archivo principal de la aplicación Node.js
 ## Instalación y Uso 
 
-Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local.
+Sigue estos siguientes pasos para configurar y ejecutar el proyecto en tu máquina local.
 
 ### Prerrequisitos
 
